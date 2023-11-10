@@ -39,6 +39,8 @@ jobs:
         python3 -m ruff .
     - name: Lint tinygrad with pylint
       run: python -m pylint tinygrad/
+    - name: Check mypy version
+      run: python -m mypy --version
     - name: Run mypy
       run: python -m mypy --warn-unused-ignores
     - name: Install SLOCCount
